@@ -192,24 +192,34 @@
                     </div>
                     <div class="offcanvas-body">
                       <div>
-                        <h6>Problem 001</h6>
+                        <h6 class="text-center pb-2">Problem 001</h6>
                         <!-- modal code start -->
 
                         <!-- Scrollable modal -->
                         <!-- Button trigger modal -->
-                        <button
-                          type="button"
-                          class="btn btn-primary"
-                          data-bs-toggle="modal"
-                          data-bs-target="#staticBackdrop"
-                        >
-                          Abdullah's Code
-                        </button>
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                          <button
+                            type="button"
+                            class="btn btn-primary sub-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop1"
+                          >
+                            Abdullah's Code
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-primary sub-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop2"
+                          >
+                            Asadullah's Code
+                          </button>
+                        </div>
 
-                        <!-- Modal -->
+                        <!-- Modal 1 -->
                         <div
                           class="modal fade"
-                          id="staticBackdrop"
+                          id="staticBackdrop1"
                           data-bs-backdrop="static"
                           data-bs-keyboard="false"
                           tabindex="-1"
@@ -312,7 +322,133 @@
                             </div>
                           </div>
                         </div>
-                        <!-- Modal code end -->
+                        <!-- Modal 1 end -->
+                        <!-- Modal 2 -->
+                        <div
+                          class="modal fade"
+                          id="staticBackdrop2"
+                          data-bs-backdrop="static"
+                          data-bs-keyboard="false"
+                          tabindex="-1"
+                          aria-labelledby="staticBackdropLabel"
+                          aria-hidden="true"
+                        >
+                          <div
+                            class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+                          >
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5
+                                  class="modal-title"
+                                  id="staticBackdropLabel"
+                                >
+                                  Asadullah's code
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                #include &lt;stdio.h&gt;<br />
+                                #include &lt;string.h&gt;<br />
+                                int match(char s1[], char s2[])<br />
+                                {<br />
+                                int len1 = strlen(s1);<br />
+                                int len2 = strlen(s2);<br />
+                                int i, k, j, state, count = 0;<br />
+                                for (i = 0; i &lt; len1; i++) {<br />
+                                s1[i] = tolower(s1[i]);<br />
+                                }<br />
+                                for (i = 0; i &lt; len2; i++) {<br />
+                                s2[i] = tolower(s2[i]);<br />
+                                }<br />
+                                for (i = 0; i &lt; len1; i++) {<br />
+                                if (i == 0 &amp;&amp; (s1[i + len2] == ' ' ||
+                                s1[i + len2] == '\0')) {<br />
+                                for (j = 0, state = 0; j &lt; len2; j++) {<br />
+                                if (s2[j] != s1[j]) {<br />
+                                state++;<br />
+                                }<br />
+                                }<br />
+                                if (state &lt; 1) {<br />
+                                count++;<br />
+                                }<br />
+                                } else if (s1[i - 1] == ' ' &amp;&amp; s1[i] ==
+                                s2[0] && (s1[i + len2] == ' ' || s1[i + len2] ==
+                                '\0')) {<br />
+                                for (j = 0, k = i, state = 0; j &lt; len2; j++,
+                                k++) {<br />
+                                if (s2[j] != s1[k]) {<br />
+                                state++;<br />
+                                }<br />
+                                }<br />
+                                if (state &lt; 1) {<br />
+                                count++;<br />
+                                }<br />
+                                }<br />
+                                }<br />
+                                printf("The frequency of the word of \"%s\" is
+                                %d\n", s2, count);<br />
+                                }<br />
+                                <br />
+                                void frequency(char s1[])<br />
+                                {<br />
+                                int len1 = strlen(s1);<br />
+                                int i, j, count, max = 0;<br />
+                                char ch = '\0';<br />
+                                for (i = 0; i &lt; len1; i++) {<br />
+                                s1[i] = tolower(s1[i]);<br />
+                                }<br />
+                                for (i = 0; i &lt; len1; i++) {<br />
+                                count = 0;<br />
+                                for (j = i; j &lt; len1; j++) {<br />
+                                if (s1[i] == s1[j]) {<br />
+                                count++;<br />
+                                }<br />
+                                }<br />
+                                if (count &gt; max) {<br />
+                                ch = s1[i];<br />
+                                max = count;<br />
+                                }<br />
+                                }<br />
+                                printf("The Highest frequency of character '%c'
+                                appears number of times : %d\n", ch, max);<br />
+                                }<br />
+                                <br />
+                                int main()<br />
+                                {<br />
+                                char str[100];<br />
+                                gets(str);<br />
+                                char target[100];<br />
+                                gets(target);<br />
+                                match(str, target);<br />
+                                frequency(str);<br />
+                                return 0;<br />
+                                }<br />
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Close
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-primary"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Understood
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Modal 2 end -->
                       </div>
                     </div>
                   </div>
