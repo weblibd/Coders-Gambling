@@ -405,7 +405,9 @@
                                 for (i = 0; i &lt; len1; i++) {<br />
                                 count = 0;<br />
                                 for (j = i; j &lt; len1; j++) {<br />
-                                if (s1[i] == s1[j]) {<br />
+                                if(s1[i]==' '){<br />
+                                continue;<br />
+                               }else if(s1[i]==s1[j]){<br />
                                 count++;<br />
                                 }<br />
                                 }<br />
