@@ -65,9 +65,21 @@ p {
   box-shadow: none !important;
 }
 .accordion-button:active,
-.accordion-button:focus {
+.accordion-button:focus,
+.accordion-btn:active,
+.accordion-btn:focus,
+.btn-submit:active,
+.btn-submit:focus {
   border: none !important;
 }
-.accordion-button:hover {
+.accordion-button:hover,
+.accordion-btn:hover,
+.btn-submit {
   background: #ff476c !important;
+}
+.accordion-btn,
+.btn-submit {
+  background-color: #ec1934 !important;
+  color: white !important;
+  position: relative;
 }
