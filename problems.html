@@ -893,6 +893,416 @@
         </div>
       </div>
     </section>
+
+    <section id="recursion">
+      <div class="container">
+        <h1 class="text-center mt-sm-0 mt-5 pt-5 pb-sm-2 pb-0">
+          Recursion Problem
+        </h1>
+        <!-- accordion -->
+        <!-- part 1 -->
+        <div class="accordion accordion-flush" id="accordionFlushExample003">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-heading003">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapse003"
+                aria-expanded="false"
+                aria-controls="flush-collapse003"
+              >
+                Problem number 003
+              </button>
+            </h2>
+            <div
+              id="flush-collapse003"
+              class="accordion-collapse collapse"
+              aria-labelledby="flush-heading003"
+              data-bs-parent="#accordionFlushExample003"
+            >
+              <div class="accordion-body">
+                <p>
+                  Write a program in C to print the first 'n' natural numbers
+                  using recursion.
+                </p>
+                <div class="row pt-3">
+                  <div class="col-sm-6 col-12">
+                    <p class="fw-bold">Sample Input:</p>
+                    <p>30</p>
+                  </div>
+                  <div class="col-sm-6 col-12">
+                    <p class="fw-bold">Sample Output:</p>
+                    <p>
+                      The natural numbers are : 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+                      15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30
+                    </p>
+                  </div>
+                </div>
+                <!-- new edit part (side bar) -->
+                <div>
+                  <button
+                    class="btn accordion-btn"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasExample003"
+                    aria-controls="offcanvasExample003"
+                  >
+                    See Submission
+                  </button>
+
+                  <div
+                    class="offcanvas offcanvas-start"
+                    tabindex="-1"
+                    id="offcanvasExample003"
+                    aria-labelledby="offcanvasExampleLabel003"
+                  >
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasExampleLabel003">
+                        String Submission
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close text-reset"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <div>
+                        <h6 class="text-center pb-2">Problem 003</h6>
+                        <!-- modal code start -->
+
+                        <!-- Scrollable modal -->
+                        <!-- Button trigger modal -->
+                        <!-- <div class="d-grid gap-2 col-6 mx-auto">
+                          <button
+                            type="button"
+                            class="btn accordion-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop001-m1"
+                          >
+                            Abdullah's Code
+                          </button>
+                          <button
+                            type="button"
+                            class="btn accordion-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop001-m2"
+                          >
+                            Asadullah's Code
+                          </button>
+                        </div> -->
+
+                        <!-- Modal 1 -->
+                        <!-- <div
+                          class="modal fade"
+                          id="staticBackdrop001-m1"
+                          data-bs-backdrop="static"
+                          data-bs-keyboard="false"
+                          tabindex="-1"
+                          aria-labelledby="staticBackdropLabel001-m1"
+                          aria-hidden="true"
+                        >
+                          <div
+                            class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+                          >
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5
+                                  class="modal-title"
+                                  id="staticBackdropLabel001-m1"
+                                >
+                                  Abdullah's code
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                #include &lt;stdio.h&gt;<br />
+                                #define N 100<br /><br />
+                                void makecap(char str1[]);<br />
+                                int strln(char str[]);<br />
+                                void strcom(char str1[], char str[]);<br />
+                                void maxchar(char str[], int len, char
+                                maxalpha[]);<br /><br />
+                                int main()<br />
+                                {<br />
+                                char str1[N], str2[N], maxalpha[26];<br />
+                                fgets(str1, N, stdin);<br />
+                                fgets(str2, N, stdin);<br />
+                                str1[strln(str1) - 1] = '\0';<br />
+                                str2[strln(str2) - 1] = '\0';<br />
+                                makecap(str1);<br />
+                                makecap(str2);<br />
+                                strcom(str1, str2);<br />
+                                maxchar(str1, strln(str1), maxalpha);<br />
+                                return 0;<br />
+                                }<br /><br />
+                                void makecap(char str1[])<br />
+                                {<br />
+                                for (int i = 0; str1[i] != '\0'; i++)<br />
+                                {<br />
+                                if (str1[i] &gt;= 97 && str1[i] &lt;= 122)<br />
+                                {<br />
+                                str1[i] = str1[i] - 32;<br />
+                                }<br />
+                                }<br />
+                                }<br />
+                                int strln(char str[])<br />
+                                {<br />
+                                int len = 0;<br />
+                                for (int i = 0; str[i]!='\0'; i++)<br />
+                                {<br />
+                                len++;<br />
+                                }<br />
+                                return len;<br />
+                                }<br /><br />
+                                void strcom(char str1[], char str2[])<br />
+                                {<br />
+                                int i, j, count = 0;<br />
+                                int len1 = strln(str1);<br />
+                                int len2 = strln(str2);<br />
+                                if (len1 &lt; len2)<br />
+                                {<br />
+                                return;<br />
+                                }<br />
+                                for (i = 0; i &lt;= len1 - len2; i++)<br />
+                                {<br />
+                                for (j = 0; j &lt; len2; j++)<br />
+                                {<br />
+                                if (str1[i + j] != str2[j])<br />
+                                {<br />
+                                break;<br />
+                                }<br />
+                                if ((j == len2 - 1 && str1[i + j + 1] == ' ' &&
+                                str1[i - 1] == ' ') || (j == len2 - 1 && str1[i
+                                + j + 1] == ' ' && i == 0) || (j == len2 - 1 &&
+                                str1[i - 1] == ' ' && i + j + 1 == len1))<br />
+                                {<br />
+                                ++count;<br />
+                                }<br />
+                                }<br />
+                                }<br />
+                                printf("The frequency of the word of \"%s\" is
+                                %d\n", str2, count);<br />
+                                }<br /><br />
+                                void maxchar(char str[], int len, char
+                                maxalpha[26])<br />
+                                {<br />
+                                for (int i = 0; i &lt; 26; i++)<br />
+                                {<br />
+                                maxalpha[i] = 0;<br />
+                                }<br />
+                                for (int i = 0; i &lt; len; i++)<br />
+                                {<br />
+                                if (str[i] &gt;= 65 && str[i] &lt;= 90)<br />
+                                {<br />
+                                int x = str[i] - 65;<br />
+                                maxalpha[x] += 1;<br />
+                                }<br />
+                                }<br />
+                                int max = maxalpha[0], count = 0;<br />
+                                for (int i = 1; i &lt; 26; i++)<br />
+                                {<br />
+                                if (max &lt; maxalpha[i])<br />
+                                {<br />
+                                max = maxalpha[i];<br />
+                                count = i;<br />
+                                }<br />
+                                }<br />
+                                printf("The Highest frequency of character
+                                \'%c\' appears number of times : %d\n", count +
+                                97, max);<br />
+                                }<br />
+                              </div>
+                              
+                            </div>
+                          </div>
+                        </div> -->
+                        <!-- Modal 1 end -->
+                        <!-- Modal 2 -->
+                        <!-- <div
+                          class="modal fade"
+                          id="staticBackdrop001-m2"
+                          data-bs-backdrop="static"
+                          data-bs-keyboard="false"
+                          tabindex="-1"
+                          aria-labelledby="staticBackdropLabel001-m2"
+                          aria-hidden="true"
+                        >
+                          <div
+                            class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+                          >
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5
+                                  class="modal-title"
+                                  id="staticBackdropLabel001-m2"
+                                >
+                                  Asadullah's code
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                #include &lt;stdio.h&gt;<br />
+                                #include &lt;string.h&gt;<br />
+                                int match(char s1[], char s2[])<br />
+                                {<br />
+                                int len1 = strlen(s1);<br />
+                                int len2 = strlen(s2);<br />
+                                int i, k, j, state, count = 0;<br />
+                                for (i = 0; i &lt; len1; i++) {<br />
+                                s1[i] = tolower(s1[i]);<br />
+                                }<br />
+                                for (i = 0; i &lt; len2; i++) {<br />
+                                s2[i] = tolower(s2[i]);<br />
+                                }<br />
+                                for (i = 0; i &lt; len1; i++) {<br />
+                                if (i == 0 &amp;&amp; (s1[i + len2] == ' ' ||
+                                s1[i + len2] == '\0')) {<br />
+                                for (j = 0, state = 0; j &lt; len2; j++) {<br />
+                                if (s2[j] != s1[j]) {<br />
+                                state++;<br />
+                                }<br />
+                                }<br />
+                                if (state &lt; 1) {<br />
+                                count++;<br />
+                                }<br />
+                                } else if (s1[i - 1] == ' ' &amp;&amp; s1[i] ==
+                                s2[0] && (s1[i + len2] == ' ' || s1[i + len2] ==
+                                '\0')) {<br />
+                                for (j = 0, k = i, state = 0; j &lt; len2; j++,
+                                k++) {<br />
+                                if (s2[j] != s1[k]) {<br />
+                                state++;<br />
+                                }<br />
+                                }<br />
+                                if (state &lt; 1) {<br />
+                                count++;<br />
+                                }<br />
+                                }<br />
+                                }<br />
+                                printf("The frequency of the word of \"%s\" is
+                                %d\n", s2, count);<br />
+                                }<br />
+                                <br />
+                                void frequency(char s1[])<br />
+                                {<br />
+                                int len1 = strlen(s1);<br />
+                                int i, j, count, max = 0;<br />
+                                char ch = '\0';<br />
+                                for (i = 0; i &lt; len1; i++) {<br />
+                                s1[i] = tolower(s1[i]);<br />
+                                }<br />
+                                for (i = 0; i &lt; len1; i++) {<br />
+                                count = 0;<br />
+                                for (j = i; j &lt; len1; j++) {<br />
+                                if (s1[i] == s1[j]) {<br />
+                                count++;<br />
+                                }<br />
+                                }<br />
+                                if (count &gt; max) {<br />
+                                ch = s1[i];<br />
+                                max = count;<br />
+                                }<br />
+                                }<br />
+                                printf("The Highest frequency of character '%c'
+                                appears number of times : %d\n", ch, max);<br />
+                                }<br />
+                                <br />
+                                int main()<br />
+                                {<br />
+                                char str[100];<br />
+                                gets(str);<br />
+                                char target[100];<br />
+                                gets(target);<br />
+                                match(str, target);<br />
+                                frequency(str);<br />
+                                return 0;<br />
+                                }<br />
+                              </div>
+                            </div>
+                          </div>
+                        </div> -->
+                        <!-- Modal 2 end -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- end real (side bar) -->
+              </div>
+            </div>
+          </div>
+          <!-- <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo"
+                aria-expanded="false"
+                aria-controls="flush-collapseTwo"
+              >
+                Accordion Item #2
+              </button>
+            </h2>
+            <div
+              id="flush-collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="flush-headingTwo"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                Placeholder content for this accordion, which is intended to
+                demonstrate the <code>.accordion-flush</code> class. This is the
+                second item's accordion body. Let's imagine this being filled
+                with some actual content.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree"
+                aria-expanded="false"
+                aria-controls="flush-collapseThree"
+              >
+                Accordion Item #3
+              </button>
+            </h2>
+            <div
+              id="flush-collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="flush-headingThree"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                Placeholder content for this accordion, which is intended to
+                demonstrate the <code>.accordion-flush</code> class. This is the
+                third item's accordion body. Nothing more exciting happening
+                here in terms of content, but just filling up the space to make
+                it look, at least at first glance, a bit more representative of
+                how this would look in a real-world application.
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
     <footer class="bg-light text-center text-lg-start">
       <!-- Copyright -->
       <div class="text-center p-3 bg-dark text-white-50">
